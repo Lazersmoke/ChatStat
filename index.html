@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="process.js"></script>
+<style>
+#controlBox{
+}
+</style>
+</head>
+<body>
+  <div id="controlBox">
+    <p id="progress">0</p>
+    Exclude GroupMe Sender Ids:
+    <br>
+    <textarea id="excludeGID"></textarea>
+    <br>
+    Exclude Users:
+    <br>
+    <textarea id="excludeUsers">Rythm</textarea>
+    <br>
+    Exclude Channels:
+    <br>
+    <textarea id="excludeChannels">bot-commands
+music</textarea>
+    <br>
+    Cutoff Date:<input type="date" id="cutoffDate">
+    <input type="checkbox" id="useCutoffDate">
+    <br>
+    Do Smoothing<input type="checkbox" id="doSmoothing">
+    <br>
+    GroupMe Mode<input type="checkbox" id="groupMeMode">
+    <br>
+    Minimum Message Count<input type="number" id="minMessages" value="10">
+    <br>
+    <input type="file" id="selectFiles" value="Import"><button id="import">Import</button>
+    <br>
+    <button onclick="analyze()">Anal</button>
+  </div>
+  <canvas id="userChart"></canvas>
+  <canvas id="dayChart"></canvas>
+</body>
+</html>
